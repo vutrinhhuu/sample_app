@@ -2,6 +2,7 @@ source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.5.1"
+gem "bcrypt", "3.1.12"
 
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.0"
@@ -15,6 +16,10 @@ gem "rubocop", "~> 0.54.0", require: false
 gem "turbolinks", "~> 5"
 
 gem "bootsnap", ">= 1.1.0", require: false
+
+gem "bootstrap", "~> 4.1.1"
+gem "config"
+gem "jquery-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
