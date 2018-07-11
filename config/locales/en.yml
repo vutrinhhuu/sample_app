@@ -31,6 +31,8 @@
 
 en:
   hello: "Hello world"
+  user: "Users"
+  account: "Account"
   home: "Home"
   help: "Help"
   about: "About"
@@ -38,7 +40,8 @@ en:
   app_name: "Sample App"
   sign_up: "Sign up"
   sign_up_now: "Sign up now!"
-  log_in: "Log in"
+  login: "Log in"
+  logout: "Log out"
   welcome: "Welcome to the Sample App!"
   name: "Name"
   email: "Email"
@@ -46,3 +49,8 @@ en:
   confirm: "Confirmation"
   create_acc: "Create my account"
   no_user_warning: "Database don't have this user!"
+  new_user: "New user?"
+  profile: "Profile"
+  setting: "Settings"
+  remember: "Remember me on this computer"
+  invalid_error: "Invalid email/password combination"

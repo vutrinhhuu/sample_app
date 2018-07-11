@@ -4,14 +4,36 @@
     <nav>
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item">
-          <%= link_to t("home"), root_path , class: "nav-link" %>
+          <%= link_to t("home"), root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to t("help"), help_path , class: "nav-link" %>
+          <%= link_to t("help"), help_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t("login"), "#" , class: "nav-link" %>
-        </li>
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to t("user"), "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <%= t("account") %> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <%= link_to t("profile"), current_user %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("setting"), "#" %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t("login"), login_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </div>
