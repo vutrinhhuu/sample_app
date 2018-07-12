@@ -3,6 +3,9 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.5.1"
 gem "bcrypt", "3.1.12"
+gem "bootstrap4-kaminari-views"
+gem "faker", "1.9.1"
+gem "kaminari"
 
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.0"

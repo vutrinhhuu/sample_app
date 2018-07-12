@@ -11,7 +11,7 @@
         </li>
         <% if logged_in? %>
           <li class="nav-item">
-            <%= link_to t("user"), "#", class: "nav-link" %>
+            <%= link_to t("user"), users_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -22,7 +22,7 @@
                 <%= link_to t("profile"), current_user %>
               </li>
               <li class="dropdown-item">
-                <%= link_to t("setting"), "#" %>
+                <%= link_to t("setting"), edit_user_path(current_user) %>
               </li>
               <li class="dropdown-item">
                 <%= link_to t("logout"), logout_path, method: :delete %>
