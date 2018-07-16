@@ -24,6 +24,8 @@ module SampleApp
 
     I18n.default_locale = :en
 
+    I18n.load_path += Dir["#{Rails.root.to_s}/config/locales/**/*.{rb,yml}"]
+
     config.generators.system_tests = nil
   end
 end
