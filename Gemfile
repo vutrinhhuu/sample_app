@@ -4,9 +4,11 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 ruby "2.5.1"
 gem "bcrypt", "3.1.12"
 gem "bootstrap4-kaminari-views"
+gem "carrierwave", "~> 1.2", ">= 1.2.3"
 gem "faker", "1.9.1"
 gem "figaro", "~> 1.1", ">= 1.1.1"
 gem "kaminari"
+gem "mini_magick", "~> 4.8"
 gem "sidekiq", "~> 5.0", ">= 5.0.5"
 
 gem "puma", "~> 3.11"
@@ -28,6 +30,10 @@ gem "jquery-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :production do
+  gem "fog", "~> 2.0"
 end
 
 group :development do
